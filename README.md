@@ -14,7 +14,7 @@ Also adds using space bar to accept most dialogs.
 
 To remap keys, edit the config file.  See [Changing Keys](#changing-keys) below
 ### Game Note
-The game currently adds most of the hot keys, minus using the Spacebar to accept dialog options.
+The game currently adds all of the hot keys except the "Spacebar to accept dialog" hotkey.
 If you do not need to customize the bindings and do not need "Spacebar to Accept", then there is no need to use this mod.
 
 ## Keys
