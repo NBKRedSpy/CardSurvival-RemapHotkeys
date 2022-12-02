@@ -22,10 +22,10 @@ If you do not need to customize the bindings and do not need "Spacebar to Accept
 |Key|Description|Added by Mod|
 |--|--|--|
 |Space|Accept action (works for most dialogs)|Yes|
-|A|Scroll Location Left||
-|S|Scroll Location Right||
-|Q|Scrolls most card lines left||
-|W|Scrolls most card lines right||
+|Q|Scroll Location Left||
+|W|Scroll Location Right||
+|A|Scrolls most card lines left||
+|S|Scrolls most card lines right||
 |E|Opens Character Equipment screen||
 |C|Opens Character screen||
 |H|Opens Character Health Screen||
