@@ -13,22 +13,12 @@ namespace RemapHotkeys
 
 
     /// <summary>
-    /// Handles the majority of the popup type dialogs.
-    /// Maps space to the button located at index zero.  
-    /// Most often the dialogs only have a single button.
+    /// Handles the majority of the popup type dialogs.  Extracting coconut fibers, 
+    /// wildlife encounters, climbing trees, etc.
     /// </summary>
     [HarmonyPatch(typeof(InspectionPopup), "Update")]
     public static class InspectionPopup_Patch
     {
-
-        static MethodInfo OnButtonClickedMethodInfo;
-
-        static InspectionPopup_Patch()
-        {
-            OnButtonClickedMethodInfo = AccessTools.Method(typeof(InspectionPopup), "OnButtonClicked", new[] { typeof(int), typeof(bool) });
-        }
-
-
         public static void Prefix(InspectionPopup __instance, List<DismantleActionButton> ___OptionsButtons, ref bool __runOriginal)
         {
 
@@ -54,17 +44,16 @@ namespace RemapHotkeys
                 }
                 else
                 {
-                    if(___OptionsButtons.Count > 0)
-                    {
-                        DismantleActionButton button = ___OptionsButtons[0];
-                        //check for diabled.  Generally dark.
-                        if (button != null && button.isActiveAndEnabled)
-                        {
-                            button.OnClicked.Invoke(0);
-                            __runOriginal = false;
-                        }
-                    }
+                    //This is most of the dialogs.  There are an array of premade buttons, which some are
+                    //  dynamically set with text when needed.
+                    DismantleActionButton button = ___OptionsButtons.FirstOrDefault(x => x.isActiveAndEnabled);
 
+                    if (button != null)
+                    {
+                        button.Click();
+                        //button.OnClicked.Invoke(0);
+                        __runOriginal = false;
+                    }
                 }
             }
 

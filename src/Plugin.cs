@@ -11,6 +11,7 @@ namespace RemapHotkeys
         public static ManualLogSource Log { get; set; }
 
         public static KeySettings KeySettings { get; private set; }
+        public static bool DisableMenuOnExitKey { get; private set; }
 
         private void Awake()
         {
@@ -18,6 +19,9 @@ namespace RemapHotkeys
             Log = Logger;
             KeySettings = new KeySettings();
             KeySettings.SetConfigValues(Config);
+
+            DisableMenuOnExitKey = Config.Bind("Options", nameof(DisableMenuOnExitKey), false,
+                "If true, will prevent the game's menu from displaying when pressing the Exit Screen hotkey.").Value;
 
             Harmony harmony = new Harmony(MyPluginInfo.PLUGIN_GUID);
             harmony.PatchAll();

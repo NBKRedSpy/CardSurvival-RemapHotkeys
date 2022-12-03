@@ -34,17 +34,20 @@ namespace RemapHotkeys
     public static class GraphicsManager_Update_Patch
     {
         private static Button CardDestoryButton;
+        public static Button BlueprintAutoFillButton;
 
-        public static void Prefix(InspectionPopup __instance)
+        public static void Prefix(GraphicsManager __instance, ref bool __runOriginal)
         {
+
             //Do not execute hotkeys if the user is in the guide screen.  It interferes with the search
             if (GraphicsManager.PlayerIsTyping)
             {
                 return;
             }
-            else if (Input.GetKeyDown(Plugin.KeySettings.ConfirmActionKey))
+
+            if (Input.GetKeyDown(Plugin.KeySettings.ConfirmActionKey))
             {
-                //Encounter screen.  For example, Seagull raid.
+                //The confirmation side of the counter.  Where things can be stolen.
                 if (CardDestoryButton == null)
                 {
                     CardDestoryButton = GameObject.Find(
@@ -52,13 +55,42 @@ namespace RemapHotkeys
                         .GetComponent<Button>();
                 }
 
+
                 if (CardDestoryButton.isActiveAndEnabled && CardDestoryButton.IsInteractable())
                 {
                     CardDestoryButton.onClick.Invoke();
+                    __runOriginal = false;
+                    return;
+                }
+                else if(__instance.BlueprintPopup.gameObject.activeInHierarchy)
+                {
+                    //The blueprint construction screen.  Located at the location bar.
+
+                    if (BlueprintAutoFillButton == null)
+                    {
+                        BlueprintAutoFillButton = (Button)AccessTools.Field(typeof(BlueprintConstructionPopup), "AutoFillButton")
+                            .GetValue(__instance.BlueprintPopup);
+                    }
+
+                    if (BlueprintAutoFillButton.isActiveAndEnabled && BlueprintAutoFillButton.IsInteractable())
+                    {
+                        BlueprintAutoFillButton.onClick.Invoke();
+                        __runOriginal = false;
+                        return;
+                    }
                 }
             }
 
 
+        }
+    }
+
+    [HarmonyPatch(typeof(GraphicsManager), nameof(GraphicsManager.Init))]
+    public static class GraphicsManager_Init_Patch
+    {
+        public static void Postfix(GraphicsManager __instance)
+        {
+            __instance.CanOpenMenu = !Plugin.DisableMenuOnExitKey;
         }
     }
 }

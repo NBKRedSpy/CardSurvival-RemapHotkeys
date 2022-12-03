@@ -8,14 +8,22 @@ For version 1.01r (the previous version) use the Screen Hotkeys mod from one of 
 * https://github.com/NBKRedSpy/CardSurvivalScreenHotKeys/releases/
 
 ## Description
-Allows remapping the hotkeys for the Card Survival game.
 
-Also adds using space bar to accept most dialogs.
+Adds:
+* Allows remapping the hotkeys for the Card Survival game.
+* Space bar will accept most dialgs
+* Option to prevent the game menu from opening when pressing the Close Dialog button.
 
 To remap keys, edit the config file.  See [Changing Keys](#changing-keys) below
+
 ### Game Note
-The game currently adds all of the hot keys except the "Spacebar to accept dialog" hotkey.
-If you do not need to customize the bindings and do not need "Spacebar to Accept", then there is no need to use this mod.
+Card Survival already has the hotkeys listed in the Keys section below.  
+This mod is not needed to access those hotkeys with their default bindings.
+
+## Options
+|Name|Default|Description|
+|--|--|--|
+|DisableMenuOnExitKey|false|If true, will prevent the close hotkey from opening the menu button.|
 
 ## Keys
 
@@ -43,10 +51,8 @@ For example: The Fishing spear has two options:  Train and Break.  When pressing
 If the dialog is for a container, accepting the action will take all items out of the container.
 
 
-# Changing Keys
-The keys can be changed in the config file which is located at ```<Steam Directory>\steamapps\common\Card Survival Tropical Island\BepInEx\config\RemapHotkeys.cfg```.
-
-The description and valid values for the keys are listed in the config file.
+# Changing the Configuration
+All options are contained in the config file which is located at ```<Steam Directory>\steamapps\common\Card Survival Tropical Island\BepInEx\config\RemapHotkeys.cfg```.
 
 The .cfg file will not exist until the mod is installed and then the game is run.
 
@@ -98,3 +104,10 @@ The UnityExplorer mod interferes with the hotkey handling when the UI is visible
 
 # Acknowledgments
 Electric keyboard icon created by yoyonpujiono https://www.flaticon.com/free-icons/electric-keyboard
+
+# Change Log
+
+## 1.1
+* Added accept action to Blueprint Construction's Auto Fill.
+* Fixed support for Inspection popups.  Now handles all types of encounters.  For example, retreating.
+* Added option DisableMenuOnExitKey
