@@ -11,13 +11,13 @@ For version 1.01r (the previous version) use the Screen Hotkeys mod from one of 
 
 Adds:
 * Allows remapping the hotkeys for the Card Survival game.
-* Space bar will accept most dialgs
+* Spacebar will accept most dialgs
 * Option to prevent the game menu from opening when pressing the Close Dialog button.
 
 To remap keys, edit the config file.  See [Changing Keys](#changing-keys) below
 
 ### Game Note
-Card Survival already has the hotkeys listed in the Keys section below.  
+Except for the "Spacebar accepts action" hotkey, Card Survival already has the hotkeys listed in the Keys section below.  
 This mod is not needed to access those hotkeys with their default bindings.
 
 ## Options
@@ -46,7 +46,7 @@ This mod is not needed to access those hotkeys with their default bindings.
 # Accepting Actions
 If there is more than one button on a dialog, the left most button will be activated.
  
-For example: The Fishing spear has two options:  Train and Break.  When pressing space bar, the Train action will be activated.
+For example: The Fishing spear has two options:  Train and Break.  When pressing spacebar, the Train action will be activated.
 
 If the dialog is for a container, accepting the action will take all items out of the container.
 
