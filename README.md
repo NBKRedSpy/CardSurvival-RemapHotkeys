@@ -114,3 +114,10 @@ Electric keyboard icon created by yoyonpujiono https://www.flaticon.com/free-ico
 
 ## 1.1.1
 * Accept Action - Added Research Completed
+
+## 1.1.2
+* Fix:  Help screen closing if Exit Screen hotkey is not escape.
+Changed code to ignore the Exit Screen hotkey if the key is not escape.
+The user will need to close the screen with the X button.
+* Fix:  Inspection popups could be invoked when disabled.
+

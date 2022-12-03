@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using HarmonyLib;
@@ -48,10 +49,16 @@ namespace RemapHotkeys
                     //  dynamically set with text when needed.
                     DismantleActionButton button = ___OptionsButtons.FirstOrDefault(x => x.isActiveAndEnabled);
 
-                    if (button != null)
+                    //DismantleActionButton note:
+                    //  These buttons are odd since the visible buttons are set to enabled, interactable, etc.
+                    //  However the ConditionsValid property indicates if the user can invoke the action.
+
+                    //Always trying to click the first active button.  
+                    //  If one is invalid, all should be.  For consistency, only checking the first
+                    //  visible button.
+                    if (button != null && button.ConditionsValid)
                     {
                         button.Click();
-                        //button.OnClicked.Invoke(0);
                         __runOriginal = false;
                     }
                 }
