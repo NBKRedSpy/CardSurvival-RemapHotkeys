@@ -111,3 +111,6 @@ Electric keyboard icon created by yoyonpujiono https://www.flaticon.com/free-ico
 * Added accept action to Blueprint Construction's Auto Fill.
 * Fixed support for Inspection popups.  Now handles all types of encounters.  For example, retreating.
 * Added option DisableMenuOnExitKey
+
+## 1.1.1
+* Accept Action - Added Research Completed

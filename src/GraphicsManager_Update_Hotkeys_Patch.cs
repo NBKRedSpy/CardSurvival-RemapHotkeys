@@ -79,6 +79,10 @@ namespace RemapHotkeys
                         return;
                     }
                 }
+                else if (__instance.BlueprintResearched.gameObject.activeInHierarchy)
+                {
+                    __instance.BlueprintResearched.Hide();
+                }
             }
 
 
