@@ -25,13 +25,28 @@ namespace RemapHotkeys
 
             //Do not execute hotkeys if the user is in the guide screen.  It interferes with the search
             if (GraphicsManager.PlayerIsTyping)
+            {
                 return;
-
+            }
             else if (Input.GetKeyDown(Plugin.KeySettings.ConfirmActionKey))
             {
+                //The additional action buttons are their own rectangles that cover the entire dialog and have a 
+                //transparent background.  This means that the main inspection buttons are active, but the user
+                //is prevented from clicking them by the transparent sub popup.
+                //
+                //Not sure how to detect this.  Best that I know how to do 
+                //being enabled.
+                if (__instance.TrashConfirm.activeInHierarchy || __instance.SelectBookmarkPopup.activeInHierarchy ||
+                    __instance.RenamePopup.activeInHierarchy)
+                {
+                    //One of the sub popup windows are being shown.  Exit
+                    return;
+                }
+
+
                 Button emptyInventoryButton = __instance.EmptyInventoryButton;
                 //Check for a container screen.
-                if ( emptyInventoryButton  != null)
+                if (emptyInventoryButton != null)
                 {
                     //Assume the user wants to empty.
                     if (emptyInventoryButton.isActiveAndEnabled && emptyInventoryButton.interactable)
@@ -40,12 +55,12 @@ namespace RemapHotkeys
                         __runOriginal = false;
                     }
 
-                    //All other actions are ignored.  They should be dissasemble or put out fire, etc.
+                    //All other actions are ignored.  They should be disassemble or put out fire, etc.
                     return;
                 }
                 else
                 {
-                    //This is most of the dialogs.  There are an array of premade buttons, which some are
+                    //This is most of the dialogs.  There are an array of pre-made buttons, which some are
                     //  dynamically set with text when needed.
                     DismantleActionButton button = ___OptionsButtons.FirstOrDefault(x => x.isActiveAndEnabled);
 
