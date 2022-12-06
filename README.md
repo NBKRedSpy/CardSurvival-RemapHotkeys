@@ -122,5 +122,5 @@ The user will need to close the screen with the X button.
 * Fix:  Inspection popups could be invoked when disabled.
 
 ## 1.1.3
-* Fix: Corrects the accept action fro "Inspection Window" executing when a "sub popup" is overlaying the buttons.  For example:  Trashing spoiled food.  Would eat instead of confirming the throw away option that is a "sub popup".  (Sorry for the diahreia!)
+* Fix: Corrects the accept action fro "Inspection Window" executing when a "sub popup" is overlaying the buttons.  For example:  Trashing spoiled food.  Would eat instead of confirming the throw away option that is a "sub popup".  (Sorry for the diarrhea!)
 
