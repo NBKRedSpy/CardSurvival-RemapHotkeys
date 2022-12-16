@@ -1,17 +1,12 @@
 # Remap Hotkeys
-
-## Version Note
-This is for the game version 1.02.  As of 12/2/2022 1.02 is in the beta branch.
-For version 1.01r (the previous version) use the Screen Hotkeys mod from one of these locations:
-
-* https://www.nexusmods.com/cardsurvivaltropicalisland/mods/1
-* https://github.com/NBKRedSpy/CardSurvivalScreenHotKeys/releases/
-
+## Demo
+A demo video is available [here](https://youtu.be/VDb_FSaII50).
 ## Description
-
+cd 
 Adds:
+* Spacebar will activate the left most button in dialogs.
+    * Puddles default to "Dig up Mud"
 * Allows remapping the hotkeys for the Card Survival game.
-* Spacebar will accept most dialgs
 * Option to prevent the game menu from opening when pressing the Close Dialog button.
 
 To remap keys, edit the config file.  See [Changing Keys](#changing-keys) below
@@ -48,7 +43,7 @@ If there is more than one button on a dialog, the left most button will be activ
  
 For example: The Fishing spear has two options:  Train and Break.  When pressing spacebar, the Train action will be activated.
 
-If the dialog is for a container, accepting the action will take all items out of the container.
+If the Card has a "Dig up Mud" option, it will be used instead of the left most action.  Usually the left most action is Drink in these cases.)
 
 
 # Changing the Configuration
@@ -106,14 +101,12 @@ The UnityExplorer mod interferes with the hotkey handling when the UI is visible
 Electric keyboard icon created by yoyonpujiono https://www.flaticon.com/free-icons/electric-keyboard
 
 # Change Log
+## 1.2.0
+* Change: Dialogs with "Dig up Mud" will be used as the default action.
+    * Should be compatible with alternate languages.
 
-## 1.1
-* Added accept action to Blueprint Construction's Auto Fill.
-* Fixed support for Inspection popups.  Now handles all types of encounters.  For example, retreating.
-* Added option DisableMenuOnExitKey
-
-## 1.1.1
-* Accept Action - Added Research Completed
+## 1.1.3
+* Fix: Corrects the accept action fro "Inspection Window" executing when a "sub popup" is overlaying the buttons.  For example:  Trashing spoiled food.  Would eat instead of confirming the throw away option that is a "sub popup".  (Sorry for the diarrhea!)
 
 ## 1.1.2
 * Fix:  Help screen closing if Exit Screen hotkey is not escape.
@@ -121,6 +114,14 @@ Changed code to ignore the Exit Screen hotkey if the key is not escape.
 The user will need to close the screen with the X button.
 * Fix:  Inspection popups could be invoked when disabled.
 
-## 1.1.3
-* Fix: Corrects the accept action fro "Inspection Window" executing when a "sub popup" is overlaying the buttons.  For example:  Trashing spoiled food.  Would eat instead of confirming the throw away option that is a "sub popup".  (Sorry for the diarrhea!)
+## 1.1.1
+* Accept Action - Added Research Completed
+
+## 1.1
+* Added accept action to Blueprint Construction's Auto Fill.
+* Fixed support for Inspection popups.  Now handles all types of encounters.  For example, retreating.
+* Added option DisableMenuOnExitKey
+
+
+
 
