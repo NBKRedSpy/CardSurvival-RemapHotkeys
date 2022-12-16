@@ -1,17 +1,11 @@
 # Remap Hotkeys
-
-## Version Note
-This is for the game version 1.02.  As of 12/2/2022 1.02 is in the beta branch.
-For version 1.01r (the previous version) use the Screen Hotkeys mod from one of these locations:
-
-* https://www.nexusmods.com/cardsurvivaltropicalisland/mods/1
-* https://github.com/NBKRedSpy/CardSurvivalScreenHotKeys/releases/
-
+## Demo
+A demo video is available [here](https://youtu.be/VDb_FSaII50).
 ## Description
-
+cd 
 Adds:
-* Allows remapping the hotkeys for the Card Survival game.
 * Spacebar will accept most dialgs
+* Allows remapping the hotkeys for the Card Survival game.
 * Option to prevent the game menu from opening when pressing the Close Dialog button.
 
 To remap keys, edit the config file.  See [Changing Keys](#changing-keys) below
