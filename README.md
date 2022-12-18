@@ -2,11 +2,12 @@
 ## Demo
 A demo video is available [here](https://youtu.be/VDb_FSaII50).
 ## Description
-cd 
+
 Adds:
 * Spacebar will activate the left most button in dialogs.
     * Puddles default to "Dig up Mud"
 * Allows remapping the hotkeys for the Card Survival game.
+* Spacebar will accept most dialgs
 * Option to prevent the game menu from opening when pressing the Close Dialog button.
 
 To remap keys, edit the config file.  See [Changing Keys](#changing-keys) below
