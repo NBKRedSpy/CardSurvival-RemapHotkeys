@@ -37,7 +37,7 @@ namespace RemapHotkeys
             CharacterKey = config.Bind(sectionName, nameof(CharacterKey), KeyCode.C, "Open the Character screen").Value;
             BlueprintScreenKey = config.Bind(sectionName, nameof(BlueprintScreenKey), KeyCode.B, "Open the Blueprint screen").Value;
             ConfirmActionKey = config.Bind(sectionName, nameof(ConfirmActionKey), KeyCode.Space, "Accept the dialog's left most action").Value;
-            ExitScreenKey = config.Bind(sectionName, nameof(ExitScreenKey), KeyCode.C, "Close the current dialog").Value;
+            ExitScreenKey = config.Bind(sectionName, nameof(ExitScreenKey), KeyCode.Escape, "Close the current dialog").Value;
             WaitingOptionsKey = config.Bind(sectionName, nameof(WaitingOptionsKey), KeyCode.T, "Opens the Waiting Options dialog (rest/sleep, etc.)").Value;
             JournalKey = config.Bind(sectionName, nameof(JournalKey), KeyCode.J, "Opens the Journal dialog").Value;
             HealthKey = config.Bind(sectionName, nameof(HealthKey), KeyCode.H, "Opens the Character Wounds dialog").Value;

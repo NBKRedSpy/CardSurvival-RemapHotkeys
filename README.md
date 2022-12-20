@@ -6,8 +6,7 @@ A demo video is available [here](https://youtu.be/VDb_FSaII50).
 Adds:
 * Spacebar will activate the left most button in dialogs.
     * Puddles default to "Dig up Mud"
-* Allows remapping the hotkeys for the Card Survival game.
-* Spacebar will accept most dialgs
+* Allows remapping the hotkeys.
 * Option to prevent the game menu from opening when pressing the Close Dialog button.
 
 To remap keys, edit the config file.  See [Changing Keys](#changing-keys) below
@@ -23,21 +22,21 @@ This mod is not needed to access those hotkeys with their default bindings.
 
 ## Keys
 
-|Key|Description|Added by Mod|
-|--|--|--|
-|Space|Accept action (works for most dialogs)|Yes|
-|Q|Scroll Location Left||
-|W|Scroll Location Right||
-|A|Scrolls most card lines left||
-|S|Scrolls most card lines right||
-|E|Opens Character Equipment screen||
-|C|Opens Character screen||
-|H|Opens Character Health Screen||
-|B|Opens Blueprint screen||
-|C|Close dialog||
-|T|Opens Waiting (rest/sleep) screen||
-|J|Opens Journal screen||
-|S|Opens Stats screen||
+|Default Key|Config Entry Name|Description|Added by Mod|
+|--|--|--|--|
+|Space|ConfirmActionKey|Accept action (works for most dialogs)|Yes|
+|Q|LocationScrollLeftKey|Scroll Location Left||
+|W|LocationScrollRightKey|Scroll Location Right||
+|A|ScrollLeftKey|Scrolls most card lines left||
+|S|ScrollRightKey|Scrolls most card lines right||
+|E|CharacterEquipmentKey|Opens Character Equipment screen||
+|C|CharacterKey|Opens Character screen||
+|H|HealthKey|Opens Character Health Screen||
+|B|BlueprintScreenKey|Opens Blueprint screen||
+|Esc|ExitScreenKey|Close dialog||
+|T|WaitingOptionsKey|Opens Waiting (rest/sleep) screen||
+|J|JournalKey|Opens Journal screen||
+|S|StatsKey|Opens Stats screen||
 
 # Accepting Actions
 If there is more than one button on a dialog, the left most button will be activated.
