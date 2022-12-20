@@ -102,12 +102,17 @@ Electric keyboard icon created by yoyonpujiono https://www.flaticon.com/free-ico
 <a href="https://www.flaticon.com/free-icons/tap" title="tap icons">Tap icons created by Pixel perfect - Flaticon</a>
 
 # Change Log
+
+## 1.2.1
+* Fix:  Corrected "ExitScreenKey" being mapped to C instead of Escape.
+    C also overlapped with the default character key.
+* Note:  Existing users would need to delete their existing config for the change to take effect.
 ## 1.2.0
 * Change: Dialogs with "Dig up Mud" will be used as the default action.
     * Should be compatible with alternate languages.
 
 ## 1.1.3
-* Fix: Corrects the accept action fro "Inspection Window" executing when a "sub popup" is overlaying the buttons.  For example:  Trashing spoiled food.  Would eat instead of confirming the throw away option that is a "sub popup".  (Sorry for the diarrhea!)
+* Fix: Corrects the accept action for "Inspection Window" executing when a "sub popup" is overlaying the buttons.  For example:  Trashing spoiled food.  Would eat instead of confirming the throw away option that is a "sub popup".  (Sorry for the diarrhea!)
 
 ## 1.1.2
 * Fix:  Help screen closing if Exit Screen hotkey is not escape.
