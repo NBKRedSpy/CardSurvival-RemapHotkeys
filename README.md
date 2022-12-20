@@ -100,6 +100,7 @@ The UnityExplorer mod interferes with the hotkey handling when the UI is visible
 
 # Acknowledgments
 Electric keyboard icon created by yoyonpujiono https://www.flaticon.com/free-icons/electric-keyboard
+<a href="https://www.flaticon.com/free-icons/tap" title="tap icons">Tap icons created by Pixel perfect - Flaticon</a>
 
 # Change Log
 ## 1.2.0
