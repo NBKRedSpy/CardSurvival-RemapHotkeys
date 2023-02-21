@@ -54,6 +54,11 @@ The .cfg file will not exist until the mod is installed and then the game is run
 To reset the config, delete the config file.  A new config will be created the next time the game is run.
 
 # Installation 
+This section describes how to manually install the mod.
+
+If using the Vortex mod manager from NexusMods, these steps are not needed.  
+
+## Overview
 This mod requires the BepInEx mod loader.
 
 ## BepInEx Setup
