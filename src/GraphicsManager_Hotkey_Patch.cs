@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using BepInEx.Configuration;
 using HarmonyLib;
 using UnityEngine;
+using UnityEngine.UIElements.UIR;
 
 namespace RemapHotkeys
 {
@@ -19,10 +22,14 @@ namespace RemapHotkeys
             KeySettings keySettings = Plugin.KeySettings;
 
             return new CodeMatcher(instructions)
-                .RemapKey(KeyCode.Q, keySettings.LocationScrollLeftKey)
-                .RemapKey(KeyCode.W, keySettings.LocationScrollRightKey)
-                .RemapKey(KeyCode.A, keySettings.ScrollLeftKey)
-                .RemapKey(KeyCode.S, keySettings.ScrollRightKey)
+                //Removed - Handled by prefix patch, but need to blank them out to prevent collision.
+                .RemapKey(KeyCode.Q, KeyCode.None)
+                .RemapKey(KeyCode.W, KeyCode.None)
+                .RemapKey(KeyCode.A, KeyCode.None)
+                .RemapKey(KeyCode.S, KeyCode.None)
+                
+                
+                //--The remainder of the mapping.
                 .RemapKey(KeyCode.B, keySettings.BlueprintScreenKey)
                 .RemapKey(KeyCode.J, keySettings.JournalKey)
                 .RemapKey(KeyCode.E, keySettings.CharacterEquipmentKey)
@@ -41,6 +48,8 @@ namespace RemapHotkeys
                 .ThrowIfNotMatch($"Missing KeyCode.{fromKey}")
                 .Set(OpCodes.Ldc_I4, (int)toKey);
         }
+
+     
 
     }
 }

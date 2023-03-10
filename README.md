@@ -1,12 +1,26 @@
+# Important: Mod Version 2.0 vs Repeat Scroll Mod
+Version 2.0.0 of this mod now contains the logic from the Repeat Scroll mod.
+The Repeat Scroll mod must be uninstalled or this mod will not load. 
+
+## New Features in 2.0.0:
+* Hotkey to move directly to the start or end of a card line.
+* Hold key to repeat scrolling a line.
+* Scroll keys supports keyboard modifiers.  For example Shift + W.
+
 # Remap Hotkeys
 ## Demo
 A demo video is available [here](https://youtu.be/VDb_FSaII50).
-## Description
 
-Adds:
+## Description
+This mod has expanded to more than just keyboard remapping.
+
+This mod adds:
+* Allows remapping the hotkeys.
 * Spacebar will activate the left most button in dialogs.
     * Puddles default to "Dig up Mud"
-* Allows remapping the hotkeys.
+* Hotkey to move directly to the start or end of a card line.
+* Hold key to repeat scrolling a line.
+* Scroll keys supports keyboard modifiers.  For example Shift + W
 * Option to prevent the game menu from opening when pressing the Close Dialog button.
 
 To remap keys, edit the config file.  See [Changing Keys](#changing-keys) below
@@ -19,14 +33,20 @@ This mod is not needed to access those hotkeys with their default bindings.
 |Name|Default|Description|
 |--|--|--|
 |DisableMenuOnExitKey|false|If true, will prevent the close hotkey from opening the menu button.|
+|EnableScrollRepeat|true|If true, holding the scroll key will continue to scroll the line.|
+|RepeatScrollMilliseconds|500|How long a scroll key must be held down to repeat a scroll operation.|
 
 ## Keys
 
 |Default Key|Config Entry Name|Description|Added by Mod|
 |--|--|--|--|
 |Space|ConfirmActionKey|Accept action (works for most dialogs)|Yes|
+|Left Shift + Q|LocationScrollStart|Scroll Location to the start|Yes|
+|Left Shift + W|LocationScrollEnd|Scroll Location to the end|Yes|
 |Q|LocationScrollLeftKey|Scroll Location Left||
 |W|LocationScrollRightKey|Scroll Location Right||
+|Shift + A|LocationScrollStart|Scroll card line to the start|Yes|
+|Shift + S|LocationScrollEnd|Scroll card line to the end|Yes|
 |A|ScrollLeftKey|Scrolls most card lines left||
 |S|ScrollRightKey|Scrolls most card lines right||
 |E|CharacterEquipmentKey|Opens Character Equipment screen||
@@ -36,22 +56,37 @@ This mod is not needed to access those hotkeys with their default bindings.
 |Esc|ExitScreenKey|Close dialog||
 |T|WaitingOptionsKey|Opens Waiting (rest/sleep) screen||
 |J|JournalKey|Opens Journal screen||
-|S|StatsKey|Opens Stats screen||
+|D|StatsKey|Opens Stats screen||
 
 # Accepting Actions
 If there is more than one button on a dialog, the left most button will be activated.
  
 For example: The Fishing spear has two options:  Train and Break.  When pressing spacebar, the Train action will be activated.
 
-If the Card has a "Dig up Mud" option, it will be used instead of the left most action.  Usually the left most action is Drink in these cases.)
+If the Card has a "Dig up Mud" option, it will be used instead of the left most action.  Usually the left most action is Drink in these cases.
 
 
 # Changing the Configuration
+
+The configuration can be changed manually or with the Configuration Manager UI.
+## Using Configuration Manager
+The ConfigManager mod provides an in game UI to manage all mod's settings by pressing F1.  Settings will not take effect until the game is restarted.
+
+This mod makes rebinding keys much easier.
+
+ConfigManager Web page: https://github.com/BepInEx/BepInEx.ConfigurationManager/ .  
+ConfigManager Mod download:  https://github.com/BepInEx/BepInEx.ConfigurationManager/releases
+
+## Manually Changing
 All options are contained in the config file which is located at ```<Steam Directory>\steamapps\common\Card Survival Tropical Island\BepInEx\config\RemapHotkeys.cfg```.
 
 The .cfg file will not exist until the mod is installed and then the game is run.
 
 To reset the config, delete the config file.  A new config will be created the next time the game is run.
+
+The full list of keys can be found here:
+https://docs.unity3d.com/2022.1/Documentation/ScriptReference/KeyCode.html
+
 
 # Installation 
 This section describes how to manually install the mod.
@@ -107,6 +142,14 @@ Electric keyboard icon created by yoyonpujiono https://www.flaticon.com/free-ico
 <a href="https://www.flaticon.com/free-icons/tap" title="tap icons">Tap icons created by Pixel perfect - Flaticon</a>
 
 # Change Log
+
+## 2.0.0
+* Added:
+    - Hotkey to move directly to the start or end of a card line.
+    - Hold key to repeat scrolling a line.
+    - Scroll keys supports keyboard modifiers.  For example Shift + W
+* Incorporates the repeat scroll functionality from Repeat Scroll.
+* Fixed README indicating S for stats.  Changed to the actual game default of D.
 
 ## 1.2.1
 * Fix:  Corrected "ExitScreenKey" being mapped to C instead of Escape.
