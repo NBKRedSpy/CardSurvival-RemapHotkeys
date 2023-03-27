@@ -143,6 +143,9 @@ Electric keyboard icon created by yoyonpujiono https://www.flaticon.com/free-ico
 
 # Change Log
 
+## 2.1.0
+* Fixed issue where the "Dig Up Mud" button was not available but the code would still try to use it.
+    This most likely didn't affect anything, but did show errors in error log.
 ## 2.0.0
 * Added:
     - Hotkey to move directly to the start or end of a card line.

@@ -93,7 +93,7 @@ namespace RemapHotkeys
                         targetButton = ___OptionsButtons.FirstOrDefault(actionButton => actionButton != null && actionButton.isActiveAndEnabled
                             &&  actionButton.Text == (string)digUpMudCardAction.ActionName);
 
-                        if(targetButton.ConditionsValid == false)
+                        if(targetButton == null || targetButton.ConditionsValid == false)
                         {
                             //Try the first action if the button cannot be clicked.
                             targetButton = null;
