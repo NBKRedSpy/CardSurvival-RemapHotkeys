@@ -51,7 +51,7 @@ namespace RemapHotkeys
                 if (CardDestoryButton == null)
                 {
                     CardDestoryButton = GameObject.Find(
-                        "MainCanvas/TooltipRect/DestroyedCardsPopup/ShadowAndPopupWithTitle/Content/Content/ButtonBase/ButtonObject")
+                        "MainCanvas/ShakeParent/TooltipRect/DestroyedCardsPopup/ShadowAndPopupWithTitle/Content/Content/ButtonBase/ButtonObject")
                         .GetComponent<Button>();
                 }
 
