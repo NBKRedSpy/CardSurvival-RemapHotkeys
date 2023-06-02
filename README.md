@@ -143,6 +143,9 @@ Electric keyboard icon created by yoyonpujiono https://www.flaticon.com/free-ico
 
 # Change Log
 
+## 3.0.0
+* Support for v1.05
+* Fixed Dry Puddle's "Dig up Dirt" not working with the "Confirm Action" hotkey (spacebar by default)
 ## 2.1.0
 * Fixed issue where the "Dig Up Mud" button was not available but the code would still try to use it.
     This most likely didn't affect anything, but did show errors in error log.

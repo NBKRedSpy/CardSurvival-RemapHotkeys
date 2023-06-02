@@ -85,6 +85,8 @@ namespace RemapHotkeys
 
                     DismantleActionButton targetButton = null;
 
+                    bool tryFirstButton = true;
+
                     if (digUpMudCardAction != null)
                     {
 
@@ -98,10 +100,13 @@ namespace RemapHotkeys
                             //Try the first action if the button cannot be clicked.
                             targetButton = null;
                         }
-
-
+                        else
+                        {
+                            tryFirstButton = false;
+                        }
                     }
-                    else
+
+                    if(tryFirstButton)
                     {
 
                         //This is most of the dialogs.  There are an array of pre-made buttons, which some are
