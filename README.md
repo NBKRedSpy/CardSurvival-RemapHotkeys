@@ -2,6 +2,9 @@
 Version 2.0.0 of this mod now contains the logic from the Repeat Scroll mod.
 The Repeat Scroll mod must be uninstalled or this mod will not load. 
 
+# Note for v1.05 Beta
+6/2/2023 - For Card Survival v1.05+ Beta, use the 3.0.0 version of this mod.
+
 ## New Features in 2.0.0:
 * Hotkey to move directly to the start or end of a card line.
 * Hold key to repeat scrolling a line.
